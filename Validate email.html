@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Validate Email Id</title>
+<script type"text/javascript">
+function validate()
+{
+var name=(document.getElementById("Name").value);
+var mob=parseInt(document.getElementById("Mobile No.").value);
+var Email=(document.getElementById("E-mail ID").value);
+
+if(isNaN(mob)==true)
+{
+alert("PLEASE ENTER ONLY INTEGERS IN MOBILE NUMBER");
+}
+else
+{
+alert("Login Successful!");
+}
+}
+
+function email()
+{
+var str=(document.getElementById("E-mail ID").value);
+var at="@";
+var dot=".";
+var indexat=str.indexOf(at);
+var indexdot=str.indexOf(dot);
+var lengthstr=str.lenght;
+
+if(str.indexOf(at)==-1)
+{
+alert("@ should be present");
+return false;
+}
+
+if(str.indexOf(at)==0)
+{
+alert("@ should not be first character");
+return false;
+}
+}
+</script>
+</head>
+<body>
+  <form>
+  <h1 align="center">Validate Email</h1><br><br>
+Name:<input type="text" id="Name"><br>
+Mobile Number:<input type="text" id="Mobile No."><br>
+Email ID:<input type="text" id="E-mail ID" onblur="email()"><br>
+<input type="button" value="Login"  onclick="validate()">
+</form>
+</body>
+</html>

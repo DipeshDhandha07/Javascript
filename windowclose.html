@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Log-in</title>
+</head>
+<script type="text/javascript">
+var counter=0;
+function validate()
+{
+ var User=document.getElementById("User").value;
+ var Pass=document.getElementById("Pass").value;
+ if (User=="admin" && Pass=="admin")
+ {
+ alert("Log-in Successful");
+ }
+else
+ {
+  alert("Log-In denied");
+  counter++;
+ }
+ if(counter>3)
+ {
+   window.close();
+ }
+}
+</script>
+<body>
+<h1 align="center"> Log-In</h1>
+<table align="center">
+<form>
+<tr>
+<td>Username:</td>
+<td> <input type="text" id="User"></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td> <input type="password" id= "Pass"></td>
+</tr>
+<tr>
+<td>
+<input type="button" value="Log-in" onClick="validate()">
+<input type="Reset" value="Reset">
+</form>
+</table>
+</body>
+</html>
