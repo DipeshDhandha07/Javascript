@@ -3,6 +3,6 @@
 
 ## Run in browser
 
-Firefox
-Chrome 
+Firefox\
+Chrome\
 Edge
